@@ -1,0 +1,574 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1f305ee3;
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: transparent;
+    position: relative;
+    z-index: 10;
+}
+
+/* Add a shorter 3D line as a separator for header */
+header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 75px;
+    right: 75px;
+    width: 88%;
+    height: 3px;
+    background: linear-gradient(to right, rgba(153, 153, 153, 0.7), rgba(204, 204, 204, 0.7), rgba(153, 153, 153, 0.7));
+    opacity: 0.8;
+    margin-bottom: 20;
+}
+
+/* Menu Container */
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Hamburger Icon */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 4px;
+}
+
+/* Reduced size of hamburger icon */
+.hamburger span {
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    margin: 4px 0;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Logo Styling */
+.logo img {
+    height: 50px; /* Reduced size of logo */
+    object-fit: contain;
+}
+
+/* Glassmorphism Effect for Menu */
+/* Updated Menu for Left-Side Full-Height */
+nav {
+    display: flex; /* Ensure the nav container behaves like a flexbox */
+    flex-direction: column; /* Stack menu items vertically */
+    position: fixed; /* Make it fixed to the screen */
+    top: 0;
+    left: -100%; /* Start off-screen */
+    height: 100vh; /* Full viewport height */
+    width: 300px; /* Set the width of the menu */
+    background: rgba(255, 255, 255, 0.2); /* Glassmorphism base */
+    backdrop-filter: blur(10px); /* Blur effect */
+    border-radius: 0; /* Remove rounded corners for full-screen feel */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px; /* Add padding for spacing */
+    z-index: 1000; /* Ensure it appears above other elements */
+    transition: left 0.4s ease; /* Smooth slide-in effect */
+}
+
+nav.active {
+    left: 0; /* Slide into view */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+nav ul li {
+    margin-bottom: 20px; /* Spacing between menu items */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px; /* Adjust font size */
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* Highlight effect on hover */
+}
+
+/* Slider Section */
+
+/* Slider Section */
+.slider {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 400px; /* Fixed height for the slider */
+    justify-content: center; /* Center the content horizontally */
+    margin-top: 40px; /* Added gap between navbar and slider */
+}
+
+/* Background 3D Box (Static) */
+.slider-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    width: 75%; /* Adjust width to fit the content */
+    height: 100%; /* Take full height of slider */
+    background-color: #cc8e3b; /* Golden turmeric yellow */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Soft shadow to make it look 3D */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Light white border */
+    overflow: hidden; /* Hide content that overflows the box */
+    margin:  auto; /* Center the box horizontally */
+    padding-top: 50px;
+    margin-top: 50px;
+    box-shadow: 0px 0px 20px 0px rgba(211, 207, 207, 0.5);
+
+}
+
+/* Slide Boxes (contain both text and image) */
+.slide-box {
+    display: flex;
+    justify-content: center; /* Center the slide content */
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    left: 100%;
+    transition: all 0.6s ease;
+}
+
+.slide-box.active-slide {
+    left: 0; /* Make the active slide appear */
+}
+
+
+/* Image Container */
+.image-container {
+    display: flex;
+    justify-content: center;
+    width: 90%; /* Adjust width for centering */
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-left: 0%;
+    flex: 1;
+}
+
+/* Increased image size and kept it centered */
+.image-container img {
+    width: 70%; /* Increased image size */
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-left: 0%
+}
+
+/* Text Container */
+.text-container {
+    padding: 10px;
+    max-width: 500px;
+    color: #fff;
+    text-align: left; /* Align text to the left */
+    flex: 1;
+}
+
+/* Heading Style */
+.heading {
+    font-size: 2.5rem; /* Increased font size for heading */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Description Style */
+.description {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+}
+
+nav::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 75px;
+    right: 75px;
+    width: 88%;
+    height: 3px;
+    background: linear-gradient(to right, rgba(153, 153, 153, 0.7), rgba(204, 204, 204, 0.7), rgba(153, 153, 153, 0.7));
+    opacity: 0.8;
+    margin-bottom: 20;
+}
+
+#scrollSection {
+    padding-top: 150px;
+    display: flex;
+    justify-content: flex-start; /* Align to the left */
+    align-items: center;
+    min-height: 500px; /* Ensures space for the box */
+    padding-left: 20px; /* Optional: Adds some space on the left */
+}
+
+.text-container {
+    flex: 1; /* Takes up available space */
+    margin-right: 50px; /* Space between text and image */
+    margin-left: 90px; /* Move the text container to the right */
+    margin-top: -100px; /* Adjust this value to move the text container up */
+}
+
+#scrollSection .heading {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #cc8e3b/* Dark color for text */
+}
+
+.paragraph {
+    font-size: 1.2rem;
+    color: whitesmoke /* Slightly lighter color */
+}
+
+.static-box {
+    width: 550px; /* Increased width */
+    height: 500px; /* Adjusted height */
+    background-color: #cc8e3b; /* Yellow background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 0px 20px 0px rgba(211, 207, 207, 0.5);
+    position: relative;
+    margin-left: 90px; /* Move the static box more to the right */
+}
+
+.animated-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.2); /* Initially small and centered */
+    width: 100%;  /* Ensure it fills the box width */
+    height: 100%; /* Ensure it fills the box height */
+    object-fit: cover; /* Make the image cover the square area */
+    transition: transform 0.5s ease-in-out; /* Smooth transition for zooming */
+}
+
+.explore-button {
+    display: inline-block;
+    padding: 15px 30px;
+    margin-top: 20px;
+    background-color: #cc8e3b; /* Golden background */
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 25px; /* More rounded edges */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.explore-button:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3), 0 12px 30px rgba(255, 255, 255, 0.2);
+    background-color: white; /* Change background to white on hover */
+    color: #cc8e3b; /* Change text color to golden on hover */
+    border: 2px solid #cc8e3b; /* Add a golden border on hover */
+}
+
+/*         STATS               */
+/* Stats Section Container */
+#statsSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0; /* Gap above and below for spacing */
+}
+
+/* Golden Curved Rectangle */
+.stats-box {
+    position: relative;
+    background-color: #cc8e3b; /* Golden color */
+    border-radius: 30px; /* Curved corners */
+    padding: 70px 50px; /* Increased padding to make the rectangle larger */
+    display: flex;
+    justify-content: space-between; /* Align circles horizontally */
+    width: 90%; /* Increased width to make the rectangle larger */
+    max-width: 1200px; /* Limit max width for a larger look */
+    box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.2); /* Soft shadow for 3D effect */
+    z-index: 1; /* Ensure the box stays above other content */
+}
+
+/* Circle Styling */
+.stat-circle {
+    position: relative;
+    width: 250px; /* Increased circle size */
+    height: 250px; /* Increased circle size */
+    background-color: #cc8e3b;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Thin blue border around circles */
+    box-shadow: 0 6px 20px rgba(221, 220, 220, 0.2); /* Subtle 3D shadow */
+    overflow: hidden;
+    margin: 0 40px; /* Increased gap between circles */
+}
+
+/* Removing the small white circle that was overlapping */
+.stat-circle::after {
+    content: none; /* Removed the small white circle */
+}
+
+/* Circle Content */
+.stat-circle-content {
+    text-align: center;
+    color: #2b6bbd; /* Blue color for numbers and text */
+}
+
+/* Number in Circle */
+.stat-number {
+    font-size: 3rem; /* Increased number size */
+    font-weight: bold;
+    color: #2b6bbd;
+    margin-bottom: 15px; /* Space between number and text */
+}
+
+/* Text inside Circle */
+.stat-text {
+    font-size: 1.0rem; /* Reduced text size */
+    color: #555;
+    text-transform: uppercase;
+}
+
+/* Additional Padding for the Stats Section */
+#scrollSection {
+    margin-bottom: 100px; /* Adjusted margin to create space before stats */
+}
+
+
+
+/*                                  # ABOUT US                                       */
+/* About Us Section Styles */
+#aboutus {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1f305ee3;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#aboutus .aboutus-wrapper {
+    text-align: center;
+    width: 90%;
+    max-width: 1200px;
+}
+
+#aboutus .aboutus-heading {
+    font-size: 36px;
+    font-weight: bold;
+    color: #cc8e3b; /* Updated Golden Color */
+    margin-bottom: 20px;
+}
+
+/* Golden Curved Rectangle with Light Glass Morphism */
+#aboutus .golden-box {
+    display: flex;
+    flex-direction: column;
+    background: rgba(204, 142, 59, 0.8); /* Golden with transparency */
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 4px 6px rgba(255, 255, 255, 0.2) inset;
+    backdrop-filter: blur(6px); /* Glass Morphism Effect */
+    -webkit-backdrop-filter: blur(6px);
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    #aboutus .golden-box {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+#aboutus .golden-text {
+    flex: 1;
+    font-size: 18px;
+    line-height: 1.8;
+    color: azure; /* Black text for better readability */
+    text-align: left;
+}
+
+#aboutus .golden-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#aboutus .golden-image img {
+    width: 120%;
+    max-width: 500px;
+    transform: perspective(500px) rotateY(15deg) rotateX(10deg);
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 768px) {
+    #aboutus .golden-image img {
+        width: 100%;
+    }
+}
+
+/* Statistics Section Container */
+#cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 90px;  /* Increased spacing between cards */
+    padding: 50px 20px;
+    background-color: #1f305ee3;  /* Same as About Us */
+}
+
+/* Stats Card Styling */
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Brutalist Card Styling */
+.brutalist-card {
+    width: 280px;  /* Adjusted width for better alignment */
+    height: 420px; /* Increased height for better balance */
+    border: 4px solid #000 ;
+    background-color: #cc8e3b;
+    padding: 1.5rem;
+    box-shadow: 10px 10px 0 #fff, 0 0 15px rgba(255, 255, 255, 0.3); /* Reduced white lighting intensity */
+    font-family: "Arial", sans-serif;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center; /* Center align content */
+    margin: 0 20px; /* Added margin to create space between the cards */
+}
+
+/* Image inside the Card */
+.brutalist-card__image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    /* No underline for images, so no change needed here */
+}
+
+/* Content Section inside Brutalist Card */
+.brutalist-card__content {
+    width: 100%;
+    text-align: center;
+}
+
+/* Heading inside the Card */
+.brutalist-card__heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: underline;  /* Only the heading has the underline */
+    margin-bottom: 1rem;
+    color: #000;
+}
+
+/* Message inside the Card */
+.brutalist-card__message {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #000;
+    margin-bottom: 1.5rem;
+}
+
+/* Actions section of the card */
+.brutalist-card__actions {
+    width: 100%; /* Ensure button takes full width */
+    display: flex;
+    justify-content: center; /* Center align button */
+}
+
+/* Button inside Brutalist Card */
+.brutalist-card__button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 3px solid #000;
+    background-color: #fff;
+    color: #000;
+    position: relative;
+    transition: all 0.2s ease;
+    box-shadow: 5px 5px 0 #000;
+    overflow: hidden;
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
+
+/* Button hover effect */
+.brutalist-card__button--learn {
+    background-color: #1f305ee3;  /* Custom background color */
+    color: #fff;
+    border-color: #1f305ee3;  /* Match background color */
+}
+
+.brutalist-card__button--learn:hover {
+    background-color: #296fbb;
+    border-color: #296fbb;
+    color: #fff;
+    box-shadow: 7px 7px 0 #004280;
+}
+
+/* Button hover effect */
+.brutalist-card__button:hover::before {
+    left: 100%;
+}
+
+.brutalist-card__button:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 7px 0 #000;
+}
+
+/* Active button effect */
+.brutalist-card__button:active {
+    transform: translate(5px, 5px);
+    box-shadow: none;
+}
+
+
+
+
+
+
+/*                        FOOTER SECTION                                   */
+.footer {
+    background-color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+    color: #cc8e3b;
+    font-weight: bold;
+}
+
+.footer p {
+    margin: 0;
+}
